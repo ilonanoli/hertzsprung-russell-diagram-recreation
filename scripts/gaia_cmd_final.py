@@ -17,7 +17,7 @@ stellar_cmap = LinearSegmentedColormap.from_list(
     ]
 )
 
-# Load real Gaia DR3 data
+# LOAD REAL GAIA DATA
 df = pd.read_csv("gaia_cmd_clean.csv")
 
 df = df.dropna(subset=["BP_RP", "M_G"])
@@ -29,7 +29,7 @@ fig, ax = plt.subplots(figsize=(13, 9))
 fig.patch.set_facecolor("#000000")
 ax.set_facecolor("#000000")
 
-# Subtle glow
+# SUBTLE GLOW
 ax.scatter(
     df["BP_RP"],
     df["M_G"],
@@ -42,7 +42,7 @@ ax.scatter(
     rasterized=True
 )
 
-# Individual stars
+# INDIVIDUAL STARS PARAMETERS
 scatter = ax.scatter(
     df["BP_RP"],
     df["M_G"],
@@ -55,7 +55,7 @@ scatter = ax.scatter(
     rasterized=True
 )
 
-# Astronomy convention: brightest stars at the top
+# BRIGHEST STARS AT THE TOP
 ax.set_xlim(-0.5, 4.2)
 ax.set_ylim(17, -6)
 
@@ -100,7 +100,7 @@ cbar.set_label(
     fontsize=12
 )
 
-# Labels for regions that are visible in the current sample
+# LABELS
 ax.annotate(
     "Main sequence",
     xy=(2.1, 8.0),
@@ -142,7 +142,7 @@ ax.text(
     )
 )
 
-# Adjust the plot size to leave room for the titles
+# ADJUST SIZE FOR READABILITY
 fig.subplots_adjust(
     top=0.79,
     bottom=0.12,

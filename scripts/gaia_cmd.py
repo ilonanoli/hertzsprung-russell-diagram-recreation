@@ -70,7 +70,7 @@ df.to_csv("gaia_cmd_clean.csv", index=False)
 print("Stars after filtering:", len(df))
 
 
-#Display the cleaned data in a color-magnitude diagram
+# DISPLAY THE CLEAN DATA IN A COLOR-MAGNITUDE DIAGRAM
 
 plt.figure(figsize=(11, 8))
 
